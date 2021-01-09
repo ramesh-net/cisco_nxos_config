@@ -1,0 +1,6 @@
+---
+interface:
+  - port: eth1/51
+    description: ansible
+    switchport_mode: access
+    vlan: 151

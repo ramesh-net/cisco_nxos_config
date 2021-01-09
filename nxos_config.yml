@@ -1,0 +1,7 @@
+---
+- name: IOS Device configuration
+  hosts: sw1
+  gather_facts: false
+  connection: local
+  roles:
+  - basic_nxos_config

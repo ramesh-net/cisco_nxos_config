@@ -1,0 +1,7 @@
+---
+l2_interface:
+  - port: eth1/51
+    description: template config
+    switchport_mode: access
+    vlan: 150
+

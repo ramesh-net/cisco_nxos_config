@@ -1,0 +1,7 @@
+{% for vlan_id in vlan %}
+vlan {{ vlan_id.number }}
+name {{ vlan_id.name }}
+interface vlan {{ vlan_id.number }}
+description {{ vlan_id.description }}
+ip address {{ vlan_id.ip }} vlan_id vlan.subnet_mask }}
+{% endfor %}

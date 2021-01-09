@@ -1,0 +1,39 @@
+---
+  - name: Generate vlan config
+    template: src=vlan_template.j2 dest=roles/basic_nxos_config/files/{{ inventory_hostname }}_vlan.cfg
+    when: option=="1" or vlan_option=="yes"
+  - name: Push Vlan Config
+    ios_config:
+      src: roles/basic_nxos_config/files/{{ inventory_hostname }}_vlan.cfg
+      force: yes
+    when: option=="1" or vlan_option=="yes"
+
+  - name: Generate interface config
+    template: src=l2_interface_template.j2 dest=roles/basic_nxos_config/files/{{ inventory_hostname }}_interface.cfg
+    when: option=="2" or interface_option=="yes"
+  - name: Push interface Config
+    ios_config:
+      src: roles/basic_nxos_config/files/{{ inventory_hostname }}_interface.cfg
+      force: yes
+    when: option=="2" or interface_option=="yes"
+    
+  - name: Generate ospf config
+    template: src=ospf_template.j2 dest=roles/basic_nxos_config/files/{{ inventory_hostname }}_ospf.cfg
+    when: option=="3" or ospf_option=="yes"
+  - name: Push OSPF Config
+    ios_config:
+      src: roles/basic_nxos_config/files/{{ inventory_hostname }}_ospf.cfg
+      force: yes
+    when: option=="3" or ospf_option=="yes"
+
+  - name: Generate bgp config
+    template: src=bgp_template.j2 dest=roles/basic_nxos_config/files/{{ inventory_hostname }}_bgp.cfg
+    when: option=="4" or bgp_option=="yes"
+  - name: Push BGP Config
+    ios_config:
+      src: roles/basic_nxos_config/files/{{ inventory_hostname }}_bgp.cfg
+      force: yes
+    when: option=="4" or bgp_option=="yes"
+
+
+

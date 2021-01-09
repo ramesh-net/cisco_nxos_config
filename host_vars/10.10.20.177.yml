@@ -1,0 +1,7 @@
+---
+l2_interface:
+  - port:
+    description:
+    switchport_mode:
+    vlan: 150
+

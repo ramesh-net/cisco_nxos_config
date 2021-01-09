@@ -1,0 +1,6 @@
+vlan:
+      - number: 151
+        name: ansible
+        description: ansible
+        ip: 172.16.151.1        
+        subnet_mask: 255.255.255.0

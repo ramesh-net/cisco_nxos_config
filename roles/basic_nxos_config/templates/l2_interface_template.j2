@@ -1,0 +1,9 @@
+{% for int in interface %}
+interface {{ int.port }}
+description {{ int.description }}
+switchport mode {{ int.switchport_mode }}
+switchport access vlan {{ int.vlan }}
+{% endfor %}
+
+
+

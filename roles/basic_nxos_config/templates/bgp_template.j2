@@ -1,0 +1,6 @@
+{% for bgp_process in bgp %}
+router bgp {{ bgp_process.asn }} 
+{% for neighbour in bgp_process.neighbour %}
+network {{ neighbour.address }} remote-as {{ neighbour.remote_as }}
+{% endfor %}
+{% endfor %}
