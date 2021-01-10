@@ -1,6 +1,6 @@
 # cisco_nxos_config
 
-Interactive configuration using Python and Ansible in NXOS devices.
+Interactive configuration of NXOS device using Python and Ansible .
 
 It contains basic VLAN, OSPF, BGP, Interface config script.
 
