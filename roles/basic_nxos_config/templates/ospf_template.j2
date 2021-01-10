@@ -1,6 +1,6 @@
 {% for ospf_process in ospf %}
 router ospf {{ospf_process.pid }}
 {% for network in ospf_process.network %}
-network {{ network.net }} {{ network.subnetmask }} area {{ network.area }}
+network {{ network.net }} {{ network.wildcard_mask }} area {{ network.area }}
 {% endfor %}
 {% endfor %}
