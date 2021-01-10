@@ -17,7 +17,7 @@ ospf:
   - pid: 10
     network:
           - net: 10.100.10.0
-            subnetmask: 0.0.0.255
+            wildcard_mask: 0.0.0.255
             area: 0
 bgp:
   - asn: 65001
